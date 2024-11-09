@@ -9,7 +9,7 @@ const connectDB = async () => {
 
   // Connect to the MongoDB URI using environment variables
   try {
-    await mongoose.connect("mongodb+srv://bachutearyan:sfXCXsJhMSrRmXZq@creche.m2a5j.mongodb.net/?retryWrites=true&w=majority&appName=Creche", {
+    await mongoose.connect(process.env.MONGODB_UR, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
